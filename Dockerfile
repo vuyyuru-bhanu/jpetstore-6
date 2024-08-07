@@ -5,7 +5,7 @@ FROM tomcat:9.0.93-jdk17
 ENV CATALINA_HOME /usr/local/tomcat
 
 # Copy the WAR file from the intermediate stage to the webapps directory
-COPY jpetstore.war $CATALINA_HOME/webapps/jpetstore.war
+COPY target/jpetstore.war $CATALINA_HOME/webapps/jpetstore.war
 
 # Expose the port where Tomcat will run
 EXPOSE 8080
