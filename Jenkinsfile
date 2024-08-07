@@ -15,7 +15,7 @@ pipeline{
         }
         stage ('checkout scm') {
             steps {
-               git 'https://github.com/vuyyuru-bhanu/jpetstore-6'
+               git branch: 'test', url: 'https://github.com/vuyyuru-bhanu/jpetstore-6'
             }
         }
        
