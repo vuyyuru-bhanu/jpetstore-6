@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
         - name: jpetstore
-          image: bhanu3333/jpetstore:5
+          image: bhanu3333/jpetstore:6
           imagePullPolicy: Always
           ports:
             - containerPort: 8080 # The port that the container is running on in the cluster
