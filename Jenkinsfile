@@ -13,12 +13,17 @@ pipeline{
                 cleanWs()
             }
         }
+        stage ('checkout scm') {
+            steps {
+               git 'https://github.com/vuyyuru-bhanu/jpetstore-6'
+            }
+        }
        
-       // stage('File System Scan') {
-           // steps {
-              //  sh "trivy fs --format table -o trivy-fs-report.html ."
-          //  }
-      //  }
+       stage('File System Scan') {
+           steps {
+              sh "trivy fs --format table -o trivy-fs-report.html ."
+           }
+       }
 
         stage ('maven compile') {
             steps {
